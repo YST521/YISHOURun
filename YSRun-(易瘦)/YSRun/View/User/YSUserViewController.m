@@ -27,6 +27,7 @@
 #import "YSSettingsViewController.h"
 #import "YSShareFunc.h"
 #import "YSUserDataHandler.h"
+#import "PointViewController.h"
 
 @interface YSUserViewController () <YSUserNoLoginViewDelegate, YSLoginViewControllerDelegate, YSNetworkManagerDelegate, YSUserSettingViewDelegate, YSUserLevelViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, YSPhotoPickerDelegate, YSRunDataHandlerDelegate, YSSettingsViewControllerDelegate, YSUserDataHandlerDelegate>
 
@@ -58,6 +59,10 @@
     
     self.userDataHandler = [YSUserDataHandler new];
     self.userDataHandler.delegate = self;
+    
+    self.view.backgroundColor =[UIColor redColor];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -108,6 +113,22 @@
     self.userNoLoginView.delegate = self;
     
     [self.settingContentView addSubview:self.userNoLoginView];
+}
+
+-(void)btnclick:(id)action{
+
+
+    PointViewController *pointVC =[[PointViewController alloc]init];
+    pointVC.navigationController.navigationBar.hidden = NO;
+    [self.navigationController pushViewController:pointVC animated:YES];
+
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    self.navigationController.navigationBar.hidden= NO;
 }
 
 - (void)resizeContentView

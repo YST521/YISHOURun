@@ -414,6 +414,10 @@
 		65F6A2C01C462CED0054082C /* login_password_has_content@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F6A2BE1C462CED0054082C /* login_password_has_content@2x.png */; };
 		65F6A2C11C462CED0054082C /* login_user_has_content@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F6A2BF1C462CED0054082C /* login_user_has_content@2x.png */; };
 		65FD75F91C30D9FC008FB5F6 /* YSDatabaseUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD75F81C30D9FC008FB5F6 /* YSDatabaseUpdateManager.m */; };
+		989FC9B01F612AA400798CF6 /* PointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989FC9AF1F612AA400798CF6 /* PointViewController.m */; };
+		989FC9B51F61380A00798CF6 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 989FC9B41F61380A00798CF6 /* PointView.m */; };
+		989FC9B81F6138D300798CF6 /* AnnotaionP.m in Sources */ = {isa = PBXBuildFile; fileRef = 989FC9B71F6138D300798CF6 /* AnnotaionP.m */; };
+		989FC9BA1F613E7600798CF6 /* position.plist in Resources */ = {isa = PBXBuildFile; fileRef = 989FC9B91F613E7600798CF6 /* position.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1068,6 +1072,13 @@
 		65F6A2BF1C462CED0054082C /* login_user_has_content@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_user_has_content@2x.png"; sourceTree = "<group>"; };
 		65FD75F71C30D9FC008FB5F6 /* YSDatabaseUpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDatabaseUpdateManager.h; sourceTree = "<group>"; };
 		65FD75F81C30D9FC008FB5F6 /* YSDatabaseUpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDatabaseUpdateManager.m; sourceTree = "<group>"; };
+		989FC9AE1F612AA400798CF6 /* PointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointViewController.h; sourceTree = "<group>"; };
+		989FC9AF1F612AA400798CF6 /* PointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointViewController.m; sourceTree = "<group>"; };
+		989FC9B31F61380A00798CF6 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
+		989FC9B41F61380A00798CF6 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
+		989FC9B61F6138D300798CF6 /* AnnotaionP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotaionP.h; sourceTree = "<group>"; };
+		989FC9B71F6138D300798CF6 /* AnnotaionP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotaionP.m; sourceTree = "<group>"; };
+		989FC9B91F613E7600798CF6 /* position.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = position.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1884,6 +1895,12 @@
 				6592337F1C1563C80046B481 /* YSSettingsViewController.h */,
 				659233801C1563C80046B481 /* YSSettingsViewController.m */,
 				659233811C1563C80046B481 /* YSSettingsViewController.xib */,
+				989FC9AE1F612AA400798CF6 /* PointViewController.h */,
+				989FC9AF1F612AA400798CF6 /* PointViewController.m */,
+				989FC9B31F61380A00798CF6 /* PointView.h */,
+				989FC9B41F61380A00798CF6 /* PointView.m */,
+				989FC9B61F6138D300798CF6 /* AnnotaionP.h */,
+				989FC9B71F6138D300798CF6 /* AnnotaionP.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -2183,6 +2200,7 @@
 				65ABA3A11BCF4F1600154E87 /* AppDelegate */,
 				65ABA37A1BCF4EAC00154E87 /* Assets.xcassets */,
 				65ABA37C1BCF4EAC00154E87 /* LaunchScreen.storyboard */,
+				989FC9B91F613E7600798CF6 /* position.plist */,
 				65ABA37F1BCF4EAC00154E87 /* Info.plist */,
 				65ABA36E1BCF4EAC00154E87 /* Supporting Files */,
 			);
@@ -2907,6 +2925,7 @@
 				655CCB891C55BFD600AC9E70 /* YSLocusView.xib in Resources */,
 				6582581A1C0DC10B00C9FBA4 /* YSHeartRateRecordCommentView.xib in Resources */,
 				6505F98C1C50B292002ECF26 /* YSSportRecordViewController.xib in Resources */,
+				989FC9BA1F613E7600798CF6 /* position.plist in Resources */,
 				65A067371BF6E98900E0BC59 /* run@2x.png in Resources */,
 				65F1BD801BE9F144008C3632 /* dropdown_2.png in Resources */,
 				656CF80A1BD50C3C00F2A759 /* big_no_star.png in Resources */,
@@ -3109,6 +3128,7 @@
 				6566F6B11C0FD4A8003362CD /* UMPostTableViewCell.m in Sources */,
 				65BAFF071C1E57EA0012235F /* YSLoadingHUD.m in Sources */,
 				65BC233C1BE75AB300265FA8 /* YSCalendarDayItem.m in Sources */,
+				989FC9B01F612AA400798CF6 /* PointViewController.m in Sources */,
 				653F94761C4783420005D217 /* KalmanFilter.m in Sources */,
 				65A555A81BD47CC2003306E7 /* YSRunningRecordViewController.m in Sources */,
 				6566F6AC1C0FD4A8003362CD /* UMFeedbackViewController.m in Sources */,
@@ -3125,6 +3145,7 @@
 				653F947B1C4787BC0005D217 /* KalmanTestViewController.m in Sources */,
 				656F57201C04030D00060361 /* YSTipCell.m in Sources */,
 				6582581B1C0DC10B00C9FBA4 /* YSTimeShaftView.m in Sources */,
+				989FC9B81F6138D300798CF6 /* AnnotaionP.m in Sources */,
 				65744B391BD27FF400A15EEE /* AFURLRequestSerialization.m in Sources */,
 				65ABA3731BCF4EAC00154E87 /* AppDelegate.m in Sources */,
 				655C57111BCF7E3300E9073E /* YSCalendarWeekdayView.m in Sources */,
@@ -3213,6 +3234,7 @@
 				655CCBE61C561D6400AC9E70 /* YSSuperscriptLabel.m in Sources */,
 				65C37AC81C5B4B9000AB80AD /* YSThirdPartShareSelectView.m in Sources */,
 				656F571B1C04025D00060361 /* YSRunDataRecordCell.m in Sources */,
+				989FC9B51F61380A00798CF6 /* PointView.m in Sources */,
 				654F21211BDA44F4002F0A4B /* YSCountdownView.m in Sources */,
 				6586EB4F1BDDC516008108A0 /* YSUserDatabaseModel.m in Sources */,
 				65AE8A071C168C030073C454 /* YSConfigManager.m in Sources */,

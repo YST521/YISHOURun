@@ -24,6 +24,7 @@
 @implementation AppDelegate
 
 // 博客地址  https://github.com/moshuqi/YSRun
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     

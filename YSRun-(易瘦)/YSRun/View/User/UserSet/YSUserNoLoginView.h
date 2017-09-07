@@ -15,6 +15,8 @@
 - (void)login;
 - (void)userNoLoginViewDidSelectedType:(YSSettingsType)type;
 
+-(void)btnclick:(id)action;
+
 @end
 
 @interface YSUserNoLoginView : UIView

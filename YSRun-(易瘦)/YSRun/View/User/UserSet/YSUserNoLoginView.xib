@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,7 +17,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mkH-kR-Pyg">
                     <rect key="frame" x="0.0" y="10" width="330" height="44"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="Ahp-aO-WTn"/>
                     </constraints>
@@ -29,7 +33,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="登录">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="loginButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Nju-tG-RTT"/>
@@ -41,19 +45,32 @@
                         <constraint firstAttribute="height" constant="32" id="uHI-5K-PkG"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlI-ri-Akd">
+                    <rect key="frame" x="16" y="192" width="298" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="zth-Tj-Vss"/>
+                    </constraints>
+                    <state key="normal" title="多个大头针"/>
+                    <connections>
+                        <action selector="pointAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aDR-Bs-qzn"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="NlF-UW-z9D" secondAttribute="trailing" constant="36" id="4vk-vJ-rih"/>
                 <constraint firstAttribute="trailing" secondItem="VFE-c7-M4Z" secondAttribute="trailing" id="BB5-CY-FEb"/>
                 <constraint firstItem="VFE-c7-M4Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NWt-PW-Du7"/>
+                <constraint firstAttribute="trailing" secondItem="ZlI-ri-Akd" secondAttribute="trailing" constant="16" id="PHx-0h-at7"/>
+                <constraint firstItem="ZlI-ri-Akd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Sm9-gd-sYm"/>
                 <constraint firstItem="VFE-c7-M4Z" firstAttribute="top" secondItem="NlF-UW-z9D" secondAttribute="bottom" constant="25" id="Tjr-Es-VET"/>
                 <constraint firstItem="mkH-kR-Pyg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XVN-DF-ieE"/>
                 <constraint firstItem="mkH-kR-Pyg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Z1N-Hg-bJ7"/>
                 <constraint firstItem="NlF-UW-z9D" firstAttribute="top" secondItem="mkH-kR-Pyg" secondAttribute="bottom" constant="25" id="a6S-hy-dlL"/>
+                <constraint firstItem="ZlI-ri-Akd" firstAttribute="top" secondItem="VFE-c7-M4Z" secondAttribute="bottom" constant="16" id="c5W-qz-vjE"/>
                 <constraint firstAttribute="trailing" secondItem="mkH-kR-Pyg" secondAttribute="trailing" id="oBa-RB-ah6"/>
                 <constraint firstItem="NlF-UW-z9D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="rtc-kx-3Hj"/>
             </constraints>

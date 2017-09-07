@@ -153,6 +153,8 @@
 
 #pragma mark - MAMapViewDelegate
 
+//绘制轨迹
+
 - (MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id <MAOverlay>)overlay
 {
     if ([overlay isKindOfClass:[MAPolyline class]])
@@ -165,9 +167,10 @@
         {
             self.pathColor = GreenBackgroundColor;
         }
+        
         polylineView.strokeColor = self.pathColor;
         //        polylineView.lineJoinType = kMALineJoinRound;//连接类型
-        //        polylineView.lineCapType = kMALineCapRound;//端点类型
+       //        polylineView.lineCapType = kCALineCapRound;//端点类型
         
         return polylineView;
     }

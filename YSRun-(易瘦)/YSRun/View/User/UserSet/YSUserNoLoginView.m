@@ -63,6 +63,13 @@
     self.cellTypeArray = @[[NSNumber numberWithInteger:YSSettingsTypeSet]];
 }
 
+
+- (IBAction)pointAction:(id)sender {
+    
+    [self.delegate btnclick:sender];
+    
+}
+
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

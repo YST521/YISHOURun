@@ -17,6 +17,7 @@
 #import "YSModifyPasswordViewController.h"
 #import "UMFeedback.h"
 #import "YSDevice.h"
+#import "PointViewController.h"
 
 #define SettingsTableViewReuseIdentifier @"SettingsTableViewReuseIdentifier"
 
@@ -41,6 +42,14 @@
     [self.navigationBarView setupWithTitle:@"设 置" target:self action:@selector(settingsViewBack)];
     
     self.navigationController.navigationBarHidden = YES;
+    //self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc]initWithTitle:@"大头针" style:(UIBarButtonItemStylePlain) target:self action:@selector(point)];
+}
+
+-(void)point{
+    PointViewController *pointVC =[[PointViewController alloc]init];
+    [self.navigationController pushViewController:pointVC animated:YES];
+    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
