@@ -65,7 +65,7 @@
 
 
 - (IBAction)pointAction:(id)sender {
-    
+
     [self.delegate btnclick:sender];
     
 }

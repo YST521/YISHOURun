@@ -418,6 +418,8 @@
 		989FC9B51F61380A00798CF6 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 989FC9B41F61380A00798CF6 /* PointView.m */; };
 		989FC9B81F6138D300798CF6 /* AnnotaionP.m in Sources */ = {isa = PBXBuildFile; fileRef = 989FC9B71F6138D300798CF6 /* AnnotaionP.m */; };
 		989FC9BA1F613E7600798CF6 /* position.plist in Resources */ = {isa = PBXBuildFile; fileRef = 989FC9B91F613E7600798CF6 /* position.plist */; };
+		98B780D81F62317B00255CA3 /* ShowRoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B780D61F62317B00255CA3 /* ShowRoadViewController.m */; };
+		98B780D91F62317B00255CA3 /* ShowRoadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B780D71F62317B00255CA3 /* ShowRoadViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1079,6 +1081,10 @@
 		989FC9B61F6138D300798CF6 /* AnnotaionP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotaionP.h; sourceTree = "<group>"; };
 		989FC9B71F6138D300798CF6 /* AnnotaionP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotaionP.m; sourceTree = "<group>"; };
 		989FC9B91F613E7600798CF6 /* position.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = position.plist; sourceTree = "<group>"; };
+		98B780D41F622EB100255CA3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = YSRun/View/Settings/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		98B780D51F62317B00255CA3 /* ShowRoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowRoadViewController.h; sourceTree = "<group>"; };
+		98B780D61F62317B00255CA3 /* ShowRoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowRoadViewController.m; sourceTree = "<group>"; };
+		98B780D71F62317B00255CA3 /* ShowRoadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowRoadViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1901,6 +1907,9 @@
 				989FC9B41F61380A00798CF6 /* PointView.m */,
 				989FC9B61F6138D300798CF6 /* AnnotaionP.h */,
 				989FC9B71F6138D300798CF6 /* AnnotaionP.m */,
+				98B780D51F62317B00255CA3 /* ShowRoadViewController.h */,
+				98B780D61F62317B00255CA3 /* ShowRoadViewController.m */,
+				98B780D71F62317B00255CA3 /* ShowRoadViewController.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -2239,6 +2248,7 @@
 			children = (
 				65ABA3711BCF4EAC00154E87 /* AppDelegate.h */,
 				65ABA3721BCF4EAC00154E87 /* AppDelegate.m */,
+				98B780D41F622EB100255CA3 /* PrefixHeader.pch */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -2947,6 +2957,7 @@
 				655CCB7F1C55BEFB00AC9E70 /* YSDetailDataView.xib in Resources */,
 				6563AEB61C43BD5700E7084A /* wave_circle@2x.png in Resources */,
 				65A067381BF6E98900E0BC59 /* tips@2x.png in Resources */,
+				98B780D91F62317B00255CA3 /* ShowRoadViewController.xib in Resources */,
 				651778381BF6152A00CD6940 /* calendar_highlight@2x.png in Resources */,
 				6580D4B81BE30DE400C5FB95 /* YSResetPasswordViewController.xib in Resources */,
 				65ABA3EF1BCF6CA000154E87 /* clock.png in Resources */,
@@ -3196,6 +3207,7 @@
 				65A555B31BD47DF9003306E7 /* YSRunningGeneralModeView.m in Sources */,
 				6596198F1BD1E2EA002110B9 /* YSRegisterViewController.m in Sources */,
 				65744B341BD27FF400A15EEE /* AFHTTPRequestOperationManager.m in Sources */,
+				98B780D81F62317B00255CA3 /* ShowRoadViewController.m in Sources */,
 				65D13CF61C489E4200EA4AAE /* YSCoordinateProcesser.m in Sources */,
 				65B2ACDD1BF9DFCC00ECB2DB /* YSChartElement.m in Sources */,
 				65A555A51BD47CC2003306E7 /* YSResultRecordView.m in Sources */,
@@ -3418,6 +3430,7 @@
 					"$(PROJECT_DIR)/YSRun/Vendors/ShareSDK/libraries/extends/QQSDK",
 					"$(PROJECT_DIR)/YSRun/Vendors/ShareSDK/libraries",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YSRun/View/Settings/PrefixHeader.pch";
 				INFOPLIST_FILE = YSRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -3451,6 +3464,7 @@
 					"$(PROJECT_DIR)/YSRun/Vendors/ShareSDK/libraries/extends/QQSDK",
 					"$(PROJECT_DIR)/YSRun/Vendors/ShareSDK/libraries",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YSRun/View/Settings/PrefixHeader.pch";
 				INFOPLIST_FILE = YSRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

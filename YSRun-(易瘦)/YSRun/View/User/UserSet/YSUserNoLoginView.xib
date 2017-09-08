@@ -50,6 +50,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlI-ri-Akd">
                     <rect key="frame" x="16" y="192" width="298" height="30"/>
+                    <color key="backgroundColor" red="0.12364625739281021" green="0.87571383248730961" blue="0.59076461711733452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="zth-Tj-Vss"/>
                     </constraints>

@@ -1,0 +1,110 @@
+//
+//  PrefixHeader.pch
+//  YSRun
+//
+//  Created by youxin on 2017/9/8.
+//  Copyright © 2017年 msq. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+// 获取物理屏幕的宽度
+#define SCREEN_Width             [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_Height            [[UIScreen mainScreen] bounds].size.height
+
+
+#define ObjectToString(obj) [NSString stringWithFormat:@"%@", [(obj) isKindOfClass:[NSNull class]] || !(obj) ? @"" : (obj)]
+
+//全局颜色设置
+#define DefaultColor UIColorFromRGB(0x1c83d5)
+#define LineColor UIColorFromRGB(0xe0e0e0)
+
+#define GreenBackgroundColor   RGB(4,181,108)
+
+#define BgColor [UIColor groupTableViewBackgroundColor]  //背景色
+#define GoldColor   UIColorFromRGB(0xffe601)          //全局色
+#define ButtonLayerCornerRadius 4 //按钮圆角
+#define CardLayerCornerRadius 8 //卡片圆角
+#define NaTitleColor UIColorFromRGB(0x571516)   //导航栏标题颜色
+#define CellTitleColor UIColorFromRGB(0x999999)
+#define MainColor    UIColorFromRGB(0x0aa9fa);   //钱包充值电话号码背景色
+
+//随机色宏
+#define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+
+#define RandomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+//cell头部小方块颜色
+#define SquareColorCyan UIColorFromRGB(0x00dafa)
+#define SquareColorYellow UIColorFromRGB(0xfec106)
+#define SquareColorOrange UIColorFromRGB(0xE47833)
+#define SquareColorGreeen UIColorFromRGB(0xd4ec40)
+#define SquareColorGray UIColorFromRGB(0x655a5a)
+#define SquareColorBlick UIColorFromRGB(0x333333)
+
+#define LineWidth IS_IPHONE6_PLUS?0.3:0.5 //线条粗度
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define ColorFromRGB_255(r, g, b, a) [UIColor colorWithRed:(float)r/255.0 green:(float)g/255.0 blue:(float)b/255.0 alpha:a]
+#define ColorFromRGB_1(r, g, b, a) [UIColor colorWithRed:(float)r green:(float)g blue:(float)b alpha:a]
+
+
+#define ObjectToString(obj) [NSString stringWithFormat:@"%@", [(obj) isKindOfClass:[NSNull class]] || !(obj) ? @"" : (obj)]
+#define ObjectToNumber(obj) ([(obj) isKindOfClass:[NSNull class]] || !(obj)) ? @(0) : ([(obj) respondsToSelector:@selector(floatValue)] ? @([(obj) floatValue]) : @(0))
+#define ObjectToINT(obj) ([(obj) isKindOfClass:[NSNull class]] || !(obj)) ? @(0) : ([(obj) respondsToSelector:@selector(integerValue)] ? @([(obj) integerValue]) : @(0))
+
+
+//常用间距
+#define UserSpace  20
+
+
+//宏定义 字体大小 6p为1  6及5s 0.9
+#define IsIphone6P           SceneWidth ==414
+#define SizeScale           (IsIphone6P ? 1 : 0.9)
+#define kFontSize(value)    value*SizeScale
+#define kFont(value)        [UIFont systemFontOfSize:value*SizeScale]
+
+//px 转 point
+#define Font(aa)      [[NSNumber numberWithFloat:(float)aa/96*72] floatValue]
+
+#ifdef DEBUG
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//#define NSLog(format, ...) printf("[%s] [%s %s] [第%d行]\n%s\n", __TIME__, [NSStringFromClass([self class]) UTF8String], [NSStringFromSelector(_cmd) UTF8String], __LINE__, [[NSString stringWithCString:[[NSString stringWithFormat:format, ## __VA_ARGS__] cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding] UTF8String]);
+//#define NSLog(format, ...) NSLog(@"[%s %s] [第%d行]\n%@\n", [NSStringFromClass([self class]) UTF8String], [NSStringFromSelector(_cmd) UTF8String], __LINE__, [NSString stringWithCString:[[NSString stringWithFormat:format, ## __VA_ARGS__] cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding]);
+#define NSLog(format, ...) NSLog(@"[%s %s] -- 第%d行\n%@", [NSStringFromClass([self class]) UTF8String], [NSStringFromSelector(_cmd) UTF8String], __LINE__, [NSString stringWithFormat:format, ## __VA_ARGS__]);
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
+
+//判断字符串是否为空
+
+#define NULLString(string) ((![string isKindOfClass:[NSString class]])||[string isEqualToString:@""] || (string == nil) || [string isEqualToString:@""] || [string isKindOfClass:[NSNull class]]||[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
+
+//判断是否是iPhone4s
+#define IS_IPHONE4S (([[UIScreen mainScreen] bounds].size.height-480)?NO:YES)
+//判断是否是iPhone5
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
+//判断是否是iPhone6、iPhone7
+#define IS_IPHONE6 (([[UIScreen mainScreen] bounds].size.height-667)?NO:YES)
+//判断是否是iPhone6plush、7plus
+#define IS_IPHONE6_PLUS (([[UIScreen mainScreen] bounds].size.height-736)?NO:YES)
+
+//Appdelegate
+#define APPDELEGATE (AppDelegate *)[[UIApplication sharedApplication] delegate]
+//当前设备的ios版本
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+
+#define ServiceUrl [APIHelper getService]
+
+
+
+
+
+#endif /* PrefixHeader_pch */

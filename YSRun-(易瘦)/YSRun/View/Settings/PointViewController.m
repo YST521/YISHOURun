@@ -9,11 +9,14 @@
 #import "PointViewController.h"
 #import <MAMapKit/MAMapKit.h>
 #import "AnnotaionP.h"
+#import "ShowRoadViewController.h"
 
 
 @interface PointViewController ()<MAMapViewDelegate>{
   NSMutableDictionary *data;
     AnnotaionP *annotationp;
+    UILabel    *showLa;
+    CLLocationCoordinate2D coordd;
 }
 
 @property (nonatomic, strong) MAMapView *mapView;
@@ -77,6 +80,12 @@
            btn.backgroundColor = [UIColor colorWithRed:4 green:181 blue:108 alpha:1];
     btn.backgroundColor =[UIColor redColor];
     [btn addTarget:self action:@selector(back) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    showLa =[[UILabel alloc]init];
+    showLa.frame = CGRectMake(0, SCREEN_Height-100, SCREEN_Width,80 );
+    [self.view addSubview:showLa];
+    showLa.backgroundColor =[UIColor greenColor];
+    showLa.numberOfLines = 0;
     
     //创建坐标
     
@@ -172,7 +181,7 @@
         annotationView.rightCalloutAccessoryView = rightButton;
         annotationView.tag =annotationp.tagg;
         //        annotationView.image = [UIImage imageNamed:@"redPin"];
-        
+       // coordd = annotation.coordinate;
         [rightButton addTarget:self action:@selector(push) forControlEvents:(UIControlEventTouchUpInside)];
         return annotationView;
     }
@@ -181,7 +190,9 @@
 
 
 -(void)push{
-    UIViewController *vc=[[UIViewController alloc]init];
+    ShowRoadViewController *vc=[[ShowRoadViewController alloc]init];
+   
+    vc.coordd = coordd;
        [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -198,7 +209,9 @@
 //            NSLog(@"******************%@",str);
 //        }
         NSLog(@"***dd**********%@--%f--%f",view.annotation.title,view.annotation.coordinate.latitude ,view.annotation.coordinate.longitude);
+    coordd = view.annotation.coordinate;
     
+    showLa.text = [NSString stringWithFormat:@"%@---%f--%f",view.annotation.title,view.annotation.coordinate.latitude ,view.annotation.coordinate.longitude];
 //    UIViewController *vc=[[UIViewController alloc]init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
